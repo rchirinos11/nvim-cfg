@@ -12,16 +12,8 @@ return require('packer').startup(function()
   use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use 'mbbill/undotree'
   use 'tpope/vim-fugitive'
-  use 'lewis6991/gitsigns.nvim'
   use 'theprimeagen/harpoon'
-  use 'github/copilot.vim'
-
-  use ({
-    'rose-pine/neovim',
-    as = 'rose-pine',
-  })
-  use 'folke/tokyonight.nvim'
-  use 'overcache/NeoSolarized'
+  use ({ 'rose-pine/neovim', as = 'rose-pine' })
 
   use {
     'VonHeikemen/lsp-zero.nvim',
@@ -37,15 +29,11 @@ return require('packer').startup(function()
       {'hrsh7th/cmp-nvim-lsp'},
       {'hrsh7th/cmp-nvim-lua'},
       {'hrsh7th/cmp-buffer'},
-      {'hrsh7th/cmp-path'},
-      {'L3MON4D3/LuaSnip'},
-      {'saadparwaiz1/cmp_luasnip'}
+      {'hrsh7th/cmp-path'}
     }
   }
 
   -- For J*va
   use 'mfussenegger/nvim-jdtls'
-  use 'mfussenegger/nvim-lint'
-  use 'https://gitlab.com/schrieveslaach/sonarlint.nvim'
 end)
 
