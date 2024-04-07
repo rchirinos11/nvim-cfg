@@ -20,6 +20,7 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 vim.keymap.set("n", "<leader>q", "<cmd>q<CR>")
 vim.keymap.set("n", "<leader>fq", "<cmd>q!<CR>")
+vim.keymap.set("n", "<leader>w", "<cmd>w<CR>")
 vim.keymap.set("n", "<leader>gcb", "<cmd>!gradle clean b<CR>")
 
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww ~/Code/Self/Scripts/sessionizer<CR>")
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww sessionizer<CR>")

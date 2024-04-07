@@ -20,7 +20,7 @@ vim.opt.termguicolors = true
 
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
-vim.opt.colorcolumn = "140"
+vim.opt.colorcolumn = "80"
 
 vim.g.mapleader = " "
 

@@ -72,4 +72,5 @@ local config = {
   }
 }
 
+vim.opt.colorcolumn = "140"
 jdtls.start_or_attach(config)
