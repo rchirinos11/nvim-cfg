@@ -1,8 +1,7 @@
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
 
 local jdtls = require('jdtls')
-local home_dir= os.getenv("HOME")
-local jdtls_dir = home_dir .. '/.local/share/nvim/mason/packages/jdtls'
+local jdtls_dir = vim.fn.stdpath'data' .. '/mason/packages/jdtls'
 local workspace_dir = jdtls_dir .. '/site/java/workspace-root/' .. project_name
 
 local config = {
@@ -33,7 +32,7 @@ local config = {
       format = {
         enabled = true,
         settings = {
-          url = home_dir .. "/Code/checkstyle.xml",
+          url = os.getenv('HOME') .. '/Code/checkstyle.xml',
           profile = "CustomCheckstyle",
         },
       },

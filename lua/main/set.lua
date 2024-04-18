@@ -24,3 +24,5 @@ vim.opt.colorcolumn = "80"
 
 vim.g.mapleader = " "
 
+vim.cmd([[ autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * checktime ]])
+

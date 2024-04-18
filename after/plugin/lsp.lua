@@ -1,4 +1,5 @@
 local lsp = require("lsp-zero")
+local sonar_dir = vim.fn.stdpath'data' .. '/mason/packages/sonarlint-language-server'
 
 lsp.preset("recommended")
 lsp.set_preferences({
@@ -49,7 +50,7 @@ require('sonarlint').setup({
          'sonarlint-language-server',
          '-stdio',
          '-analyzers',
-         vim.fn.expand(os.getenv('HOME') .. "/.local/share/nvim/mason/packages/sonarlint-language-server/extension/analyzers/sonarjava.jar"),
+         vim.fn.expand(sonar_dir .. '/extension/analyzers/sonarjava.jar'),
       }
    },
    filetypes = {'java'}
