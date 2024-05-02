@@ -15,6 +15,7 @@ return require('packer').startup(function()
   use 'lewis6991/gitsigns.nvim'
   use 'theprimeagen/harpoon'
   use 'github/copilot.vim'
+  use 'mhartington/formatter.nvim'
   use 'nvim-treesitter/nvim-treesitter-context'
 
   use ({
