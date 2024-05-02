@@ -3,6 +3,7 @@ local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
 local jdtls = require('jdtls')
 local jdtls_dir = vim.fn.stdpath'data' .. '/mason/packages/jdtls'
 local workspace_dir = jdtls_dir .. '/site/java/workspace-root/' .. project_name
+local jar = vim.fn.glob(jdtls_dir .. '/plugins/org.eclipse.equinox.launcher_*.jar')
 
 local config = {
   cmd = {
@@ -17,7 +18,7 @@ local config = {
     '--add-opens', 'java.base/java.util=ALL-UNNAMED',
     '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
     '-javaagent:' .. jdtls_dir .. '/lombok.jar',
-    '-jar', jdtls_dir .. '/plugins/org.eclipse.equinox.launcher_1.6.700.v20231214-2017.jar',
+    '-jar', jar,
     '-configuration', jdtls_dir .. '/config_linux',
     '-data', workspace_dir
   },
