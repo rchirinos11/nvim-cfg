@@ -1,9 +1,8 @@
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
 
 local jdtls = require('jdtls')
-local home_dir= os.getenv("HOME")
-local jdtls_dir = home_dir .. '/.local/share/nvim/mason/packages/jdtls'
-local workspace_dir = jdtls_dir .. '/site/java/workspace-root/' .. project_name
+local jdtls_dir = vim.fn.stdpath'data' .. '/mason/packages/jdtls'
+local jar_dir = vim.fn.glob(jdtls_dir .. '/plugins/org.eclipse.equinox.launcher_*.jar')
 
 local config = {
   cmd = {
@@ -18,55 +17,23 @@ local config = {
     '--add-opens', 'java.base/java.util=ALL-UNNAMED',
     '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
     '-javaagent:' .. jdtls_dir .. '/lombok.jar',
-    '-jar', jdtls_dir .. '/plugins/org.eclipse.equinox.launcher_1.6.700.v20231214-2017.jar',
+    '-jar', jar_dir,
     '-configuration', jdtls_dir .. '/config_linux',
-    '-data', workspace_dir
+    '-data', jdtls_dir .. '/site/java/workspace-root/' .. project_name
   },
-
-  root_dir = require('jdtls.setup').find_root({ ".git", "mvnw", "gradlew", "pom.xml", "build.gradle" }),
 
   settings = {
     java = {
-      references = {
-        includeDecompiledSources = true,
-      },
       format = {
-        enabled = true,
         settings = {
-          url = home_dir .. "/Code/checkstyle.xml",
-          profile = "CustomCheckstyle",
+          url = os.getenv('HOME') .. '/Code/checkstyle.xml',
+          profile = "Custom",
         },
       },
-      eclipse = {
-        downloadSources = true,
-      },
-      maven = {
-        downloadSources = true,
-      },
-      signatureHelp = { enabled = true },
       contentProvider = { preferred = "fernflower" },
       completion = {
         favoriteStaticMembers = { "org.mockito.Mockito.*" },
-        filteredTypes = {
-          "com.sun.*",
-          "io.micrometer.shaded.*",
-          "java.awt.*",
-          "jdk.*",
-          "sun.*",
-        },
         importOrder = {},
-      },
-      sources = {
-        organizeImports = {
-          starThreshold = 10,
-          staticStarThreshold = 99,
-        },
-      },
-      codeGeneration = {
-        toString = {
-          template = "${object.className}{${member.name()}=${member.value}, ${otherMembers}}",
-        },
-        useBlocks = true,
       },
     },
   }

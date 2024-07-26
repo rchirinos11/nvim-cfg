@@ -20,3 +20,4 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>w", "<cmd>w<CR>")
 
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww sessionizer<CR>")
+vim.keymap.set("n", "<leader>l", "<cmd>Lazy<CR>")

@@ -1,3 +1,4 @@
-require("main.set")
-require("main.remap")
-require("main.keymap")
+require("config.set")
+require("config.remap")
+require("config.keymap")
+require("config.lazy")
