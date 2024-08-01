@@ -1,5 +1,7 @@
 return {
   "tpope/vim-fugitive",
+  dependencies = "gitsigns.nvim",
+  cmd = { "G" },
   keys = {
     { "<leader>gs", "<cmd>G<CR>" },
     { "<leader>gp", "<cmd>G push<CR>" },

@@ -1,7 +1,11 @@
 return {
   "nvim-telescope/telescope.nvim",
   branch = "0.1.x",
-  dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope-ui-select.nvim" },
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-telescope/telescope-ui-select.nvim",
+    "gitsigns.nvim",
+  },
   keys = {
     { "<C-p>", "<cmd>Telescope git_files<CR>" },
     { "<leader>pf", "<cmd>Telescope find_files<CR>" },
