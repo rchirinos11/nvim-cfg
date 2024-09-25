@@ -19,5 +19,6 @@ return {
   {
     "nvim-treesitter/nvim-treesitter-context",
     event = "BufEnter *.*",
+    keys = { { "<leader>tct", "<cmd>TSContextToggle<CR>" } },
   }
 }

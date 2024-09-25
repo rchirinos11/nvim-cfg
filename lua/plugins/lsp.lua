@@ -22,6 +22,7 @@ return {
     dependencies = {
       {'hrsh7th/cmp-path'},
       {'L3MON4D3/LuaSnip'},
+      {'saadparwaiz1/cmp_luasnip'},
     },
     config = function()
       local lsp_zero = require('lsp-zero')
@@ -49,6 +50,7 @@ return {
         sources = {
           { name = 'nvim_lsp' },
           { name = 'nvim_lua' },
+          { name = 'luasnip' },
           { name = 'path' },
         },
       })
