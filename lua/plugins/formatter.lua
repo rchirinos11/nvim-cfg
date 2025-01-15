@@ -18,9 +18,12 @@ return {
           go = {
             require("formatter.filetypes.go").gofumpt
           },
+          c = {
+            require("formatter.filetypes.c").clangformat
+          },
           ["*"] = {
             require("formatter.filetypes.any").remove_trailing_whitespace
-          }
+          },
         }
       }
 

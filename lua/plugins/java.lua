@@ -3,11 +3,13 @@ return {
   {
     "mfussenegger/nvim-jdtls",
     dependencies = { "nvim-telescope/telescope.nvim", },
+    keys = { {"<leader>jrs", "<cmd>JdtRestart<CR>"} },
     ft = "java",
   },
   {
     "https://gitlab.com/schrieveslaach/sonarlint.nvim",
     ft = "java",
+    enabled = false,
     opts = {
       server = {
         cmd = {

@@ -18,4 +18,9 @@ return {
     name = "rose-pine",
     keys = { { "<leader>crp", "<cmd>colorscheme rose-pine<CR>" } },
   },
+  {
+    "santos-gabriel-dario/darcula-solid.nvim",
+    dependencies = "rktjmp/lush.nvim",
+    keys = { { "<leader>cds", "<cmd>colorscheme darcula-solid<CR>" } },
+  },
 }

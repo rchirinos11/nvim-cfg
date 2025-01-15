@@ -1,4 +1,5 @@
 return {
   "github/copilot.vim",
-  ft = { "java", "go", "python" },
+  keys = { { "<A-\\>" , mode="i"}, { "cpl", "<cmd>Copilot<CR>", mode="i" } },
+  ft = { "java", "python", },
 }
