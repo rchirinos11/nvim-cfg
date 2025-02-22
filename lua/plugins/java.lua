@@ -22,4 +22,8 @@ return {
       filetypes = {'java'}
     }
   },
+  {
+    "JKachele/vim-templates",
+    ft = "java"
+  },
 }
