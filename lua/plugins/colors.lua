@@ -1,17 +1,17 @@
 return {
   {
-    "catppuccin/nvim",
+    "rebelot/kanagawa.nvim",
     lazy = false,
     priority = 1000,
-    name = "catppuccin",
-    keys = { { "<leader>ccp", "<cmd>colorscheme catppuccin<CR>" } },
+    keys = { { "<leader>ckg", "<cmd>colorscheme kanagawa<CR>" } },
     config = function()
-      vim.cmd([[colorscheme catppuccin]])
+      vim.cmd([[colorscheme kanagawa]])
     end
   },
   {
-    "folke/tokyonight.nvim",
-    keys = { { "<leader>ctk", "<cmd>colorscheme tokyonight<CR>" } },
+    "catppuccin/nvim",
+    name = "catppuccin",
+    keys = { { "<leader>ccp", "<cmd>colorscheme catppuccin<CR>" } },
   },
   {
     "rose-pine/neovim",
