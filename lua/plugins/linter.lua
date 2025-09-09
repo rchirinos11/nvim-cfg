@@ -5,7 +5,7 @@ return {
     config = function()
       local lint = require('lint')
 
-      lint.linters.checkstyle.args = { '-c', os.getenv('HOME') .. '/Code/checkstyle.xml', }
+      lint.linters.checkstyle.args = { '-c', os.getenv('HOME') .. '/Code/checkstyle.xml', '-f=sarif' }
       lint.linters_by_ft = {
         java = {'checkstyle'},
       }

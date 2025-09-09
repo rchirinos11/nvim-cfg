@@ -21,6 +21,11 @@ return {
     telescope.setup({
       extensions = {
         ["ui-select"] = { require("telescope.themes").get_dropdown {} }
+      },
+      pickers = {
+        lsp_references = {
+          path_display = { "tail" }
+        }
       }
     })
     telescope.load_extension("ui-select")
