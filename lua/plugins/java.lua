@@ -9,6 +9,7 @@ return {
   {
     "https://gitlab.com/schrieveslaach/sonarlint.nvim",
     ft = "java",
+    dependencies = { 'mason-org/mason.nvim' },
     opts = {
       server = {
         cmd = {
