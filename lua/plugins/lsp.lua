@@ -16,7 +16,7 @@ return {
   {
     'neovim/nvim-lspconfig',
     cmd = {'LspInstall', 'LspUninstall'},
-    event = 'BufEnter *.*',
+    event = { "BufReadPre *.*", "BufNewFile *.*" },
     dependencies = {
       {'hrsh7th/cmp-nvim-lsp'},
       {'mason-org/mason-lspconfig.nvim'},
